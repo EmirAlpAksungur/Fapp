@@ -1,0 +1,75 @@
+.table-card {
+  width: 90%;
+  margin: auto;
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  margin-top: 48px;
+}
+
+.table-card {
+  padding: 20px;
+  overflow-x: auto; /* Mobilde kaydırma için */
+}
+
+.table-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: blue;
+}
+
+.table-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Mobil uyumlu ayarlar */
+@media (max-width: 768px) {
+  .custom-table,
+  .custom-table thead,
+  .custom-table tbody,
+  .custom-table th,
+  .custom-table td,
+  .custom-table tr {
+    display: block; /* Tabloların blok olarak görünmesi için */
+  }
+
+  .custom-table tr {
+    margin-bottom: 15px; /* Satırlar arasında boşluk */
+  }
+
+  .custom-table th {
+    position: absolute; /* Başlık hücrelerini konumlandır */
+    left: -9999px; /* Görünmez yap */
+  }
+
+  .custom-table td {
+    position: relative; /* Hücre içindeki içerik için konumlandır */
+    padding-left: 50%; /* Başlık hücresi için alan bırak */
+  }
+
+  .custom-table td:before {
+    content: attr(data-label); /* Hücre için başlık metni */
+    position: absolute;
+    left: 10px; /* Soldan boşluk */
+    width: calc(50% - 10px); /* Genişlik ayarı */
+    white-space: nowrap; /* Taşmaması için */
+    font-weight: bold; /* Kalın yazı */
+  }
+}
