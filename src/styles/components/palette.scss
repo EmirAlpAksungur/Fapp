@@ -1,0 +1,242 @@
+//bg
+$light-bg: #fafafb;
+$dark-bg: #121212;
+$light-bg-secondary: #ffffff;
+$dark-bg-secondary: #1e1e1e;
+$dark-bg-warning: rgb(210, 100, 21);
+$light-bg-warning: rgb(242, 112, 19);
+
+//text
+$light-text: #000000;
+$dark-text: #ffffff;
+$light-text-secondary: rgb(89, 89, 89);
+$dark-text-secondary: rgb(240, 240, 240);
+$light-text-secondary-darker: rgb(140, 140, 140);
+$dark-text-secondary-darker: rgba(255, 255, 255, 0.45);
+$dark-text-warning: rgb(210, 100, 21);
+$light-text-warning: rgb(242, 112, 19);
+$dark-text-error: rgb(209, 60, 49);
+$light-text-error: rgb(240, 65, 52);
+
+//border
+$light-border: rgb(230, 235, 241);
+$dark-border: rgba(255, 255, 255, 0.05);
+$light-border-secondary: rgb(217, 217, 217);
+$dark-border-secondary: rgb(89, 89, 89);
+$light-border-warning: rgb(255, 176, 102);
+$dark-border-warning: rgb(125, 67, 25);
+
+//hover
+$light-bg-secondary-hover: rgba(0, 0, 0, 0.04);
+$dark-bg-secondary-hover: rgba(255, 255, 255, 0.08);
+
+$light-bg-warning-hover: rgb(204, 82, 6);
+$dark-bg-warning-hover: rgb(233, 136, 58);
+
+$light-bg-warning-active: rgba(242, 112, 19, 0.08);
+$light-bg-warning-active-hover: rgba(210, 100, 21, 0.16);
+$dark-bg-warning-active: rgba(210, 100, 21, 0.16);
+$dark-bg-warning-active-hover: rgba(210, 100, 21, 0.25);
+
+$dark-selected: rgba(63, 81, 181, 0.16);
+$light-selected: rgba(63, 81, 181, 0.08);
+
+$notification-error: red;
+$notification-warning: yellow;
+$notification-success: green;
+
+$msg-self: #248bf5;
+$dark-bg-pop-up: #3f3f3f;
+
+$themes: (
+  light: (
+    //text
+    text: $light-text,
+    text-secondary: $light-text-secondary,
+    text-secondary-darker: $light-text-secondary-darker,
+    text-warning: $light-text-warning,
+    text-error: $light-text-error,
+    // header
+    border: $light-border,
+    border-secondary: $light-border-secondary,
+    border-warning: $light-border-warning,
+    //  background
+    bg: $light-bg,
+    bg-secondary: $light-bg-secondary,
+    bg-warning: $light-bg-warning,
+    bg-fancy:
+      linear-gradient(
+        250.38deg,
+        rgb(255, 244, 230) 2.39%,
+        rgb(255, 176, 102) 34.42%,
+        rgb(242, 112, 19) 60.95%,
+        rgb(204, 82, 6) 84.83%,
+        rgb(128, 40, 0) 104.37%
+      ),
+    //hover
+    bg-warning-hover: $light-bg-warning-hover,
+    bg-secondary-hover: $light-bg-secondary-hover,
+    //activ
+    bg-warning-active: $light-bg-warning-active,
+    //activ-hover
+    bg-warning-active-hover: $light-bg-warning-active-hover,
+    //shadow
+    box-shadow: inherit,
+    //-----------------
+    //selected Item
+    // button
+    bg-btn-outlined: $light-bg-secondary,
+    text-btn-outlined: lighten($dark-bg-secondary, 20),
+    border-btn-outlined: lighten($dark-bg-secondary, 20),
+    bg-btn-hover-outlined: darken($light-bg-secondary, 10),
+    text-btn-hover-outlined: lighten($dark-bg-secondary, 10),
+    border-btn-hover-outlined: lighten($dark-bg-secondary, 10),
+    bg-btn-contained: lighten($dark-bg-secondary, 20),
+    text-btn-contained: $light-bg-secondary,
+    border-btn-contained: $light-bg-secondary,
+    bg-btn-hover-contained: lighten($dark-bg-secondary, 10),
+    text-btn-hover-contained: darken($light-bg-secondary, 10),
+    border-btn-hover-contained: darken($light-bg-secondary, 10),
+    bg-btn-text: $light-bg-secondary,
+    text-btn-text: lighten($dark-bg-secondary, 20),
+    bg-btn-hover-text: darken($light-bg-secondary, 10),
+    text-btn-hover-text: lighten($dark-bg-secondary, 10),
+    //select
+    text-select: $light-text,
+    icon-select: lighten($dark-bg-secondary, 20),
+    border-hover-select: $dark-bg-secondary,
+    text-hover-select: $light-text,
+    icon-hover-select: $dark-bg-secondary,
+    bg-item-hover-select: darken($light-bg, 4),
+    bg-selected-select: $light-selected,
+    bg-selected-hover-select: darken($light-selected, 4),
+    //pop-up
+    bg-pop-up: $light-bg,
+    //notification
+    notification-error: lighten($notification-error, 5),
+    notification-warning: lighten($notification-warning, 5),
+    notification-success: lighten($notification-success, 5),
+    //msg
+    msg-self: $msg-self,
+
+    //General
+    primary: #e3f2fd,
+    secondary: #f3e5f5,
+    error: #e57373,
+    warning: #ffb74d,
+    info: #4fc3f7,
+    success: #81c784,
+    grays: #adb5bd,
+  ),
+  dark: (
+    //text
+    text: $dark-text,
+    text-secondary: $dark-text-secondary,
+    text-secondary-darker: $dark-text-secondary-darker,
+    text-warning: $dark-text-warning,
+    text-error: $dark-text-error,
+    // header
+    border: $dark-border,
+    border-secondary: $dark-border-secondary,
+    border-warning: $dark-border-warning,
+    // main background
+    bg: $dark-bg,
+    bg-secondary: $dark-bg-secondary,
+    bg-warning: $dark-bg-warning,
+    bg-fancy:
+      linear-gradient(
+        250.38deg,
+        rgb(50, 34, 26) 2.39%,
+        rgb(125, 67, 25) 34.42%,
+        rgb(210, 100, 21) 60.95%,
+        rgb(233, 136, 58) 84.83%,
+        rgb(248, 196, 140) 104.37%
+      ),
+    //hover
+    bg-warning-hover: $dark-bg-warning-hover,
+    bg-secondary-hover: $dark-bg-secondary-hover,
+    //activ
+    bg-warning-active: $dark-bg-warning-active,
+    //activ-hover
+    bg-warning-active-hover: $dark-bg-warning-active-hover,
+    //shadow
+    box-shadow:
+      (
+        rgba(0, 0, 0, 0.14) 0px 1px 1px,
+        rgba(0, 0, 0, 0.12) 0px 2px 1px,
+        rgba(0, 0, 0, 0.2) 0px 1px 3px
+      ),
+    //-----------------
+    //selected Item
+    // button
+    bg-btn-outlined: $dark-bg-secondary,
+    text-btn-outlined: darken($light-bg-secondary, 20),
+    border-btn-outlined: darken($light-bg-secondary, 20),
+    bg-btn-hover-outlined: lighten($dark-bg-secondary, 10),
+    text-btn-hover-outlined: darken($light-bg-secondary, 10),
+    border-btn-hover-outlined: darken($light-bg-secondary, 10),
+    bg-btn-contained: darken($light-bg-secondary, 20),
+    text-btn-contained: $dark-bg-secondary,
+    border-btn-contained: $dark-bg-secondary,
+    bg-btn-hover-contained: darken($light-bg-secondary, 10),
+    text-btn-hover-contained: lighten($dark-bg-secondary, 10),
+    border-btn-hover-contained: lighten($dark-bg-secondary, 10),
+    bg-btn-text: $dark-bg-secondary,
+    text-btn-text: darken($light-bg-secondary, 20),
+    bg-btn-hover-text: lighten($dark-bg-secondary, 10),
+    text-btn-hover-text: darken($light-bg-secondary, 10),
+    //select
+    border-select: darken($light-bg-secondary, 20),
+    text-select: $dark-text,
+    icon-select: darken($light-bg-secondary, 20),
+    border-hover-select: $light-bg-secondary,
+    text-hover-select: $dark-text,
+    icon-hover-select: $light-bg-secondary,
+    bg-item-hover-select: lighten($dark-bg-pop-up, 4),
+    bg-selected-select: $dark-selected,
+    bg-selected-hover-select: lighten($dark-selected, 4),
+    //pop-up
+    bg-pop-up: $dark-bg-pop-up,
+    //notification
+    notification-error: darken($notification-error, 5),
+    notification-warning: darken($notification-warning, 5),
+    notification-success: darken($notification-success, 5),
+    //msg
+    msg-self: darken($msg-self, 5),
+    //General
+    primary: #42a5f5,
+    secondary: #ab47bc,
+    error: #d32f2f,
+    warning: #f57c00,
+    info: #0288d1,
+    success: #388e3c,
+    grays: #6c757d,
+  ),
+) !default;
+
+$theme-map: null;
+
+@mixin themify($themes: $themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}

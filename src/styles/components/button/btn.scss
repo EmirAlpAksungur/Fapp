@@ -1,0 +1,70 @@
+@use "../palette";
+@mixin textOptions {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+@mixin btnRounded {
+  & {
+    border-radius: 999px !important;
+  }
+}
+
+@mixin btnOutlined {
+  @include palette.themify(palette.$themes) {
+    background-color: palette.themed("bg-btn-outlined");
+    border-color: palette.themed("border-btn-outlined");
+    color: palette.themed("text-btn-outlined");
+    @include textOptions();
+  }
+  &:hover {
+    @include palette.themify(palette.$themes) {
+      background-color: palette.themed("bg-btn-hover-outlined");
+      border-color: palette.themed("border-btn-hover-outlined");
+      color: palette.themed("text-btn-hover-outlined");
+    }
+  }
+}
+
+@mixin btnContained {
+  transform: none;
+  @include palette.themify(palette.$themes) {
+    background-color: palette.themed("bg-warning");
+    border-color: palette.themed("bg-warning");
+    color: palette.$dark-text;
+    @include textOptions();
+  }
+  &:hover {
+    transform: scale(1.05);
+    translate: 0px;
+    @include palette.themify(palette.$themes) {
+      background-color: palette.themed("bg-warning-hover");
+      border-color: palette.themed("bg-warning-hover");
+    }
+  }
+}
+
+@mixin btnText {
+  @include palette.themify(palette.$themes) {
+    background-color: transparent;
+    color: palette.themed("text-btn-text");
+    @include textOptions();
+  }
+  &:hover {
+    @include palette.themify(palette.$themes) {
+      background-color: palette.themed("bg-btn-hover-text");
+      color: palette.themed("text-btn-hover-text");
+    }
+  }
+  &__active {
+    @include palette.themify(palette.$themes) {
+      background-color: palette.themed("bg-warning-active");
+      color: palette.themed("text-warning");
+    }
+    &:hover {
+      @include palette.themify(palette.$themes) {
+        background-color: palette.themed("bg-warning-active-hover") !important;
+        color: palette.themed("text-warning") !important;
+      }
+    }
+  }
+}

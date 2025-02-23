@@ -1,0 +1,26 @@
+@use "../palette";
+@use "../button/btn";
+
+.un-auth-header {
+  padding: 24px;
+  height: 80px;
+  @include palette.themify(palette.$themes) {
+    background-color: palette.themed("bg");
+  }
+}
+
+.header {
+  padding: 24px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+  @include palette.themify(palette.$themes) {
+    background-color: palette.themed("bg-secondary");
+    border-color: palette.themed("border");
+  }
+  &__btn {
+    @include btn.btnOutlined();
+  }
+}

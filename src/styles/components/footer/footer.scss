@@ -1,0 +1,12 @@
+@use "../palette";
+
+.footer {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10%;
+  @include palette.themify(palette.$themes) {
+    background-color: palette.themed("bg");
+  }
+}

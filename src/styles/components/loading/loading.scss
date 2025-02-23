@@ -1,0 +1,16 @@
+@use "../palette";
+.loading-component-box {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1.5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  flex: 1;
+  &__progress {
+    @include palette.themify(palette.$themes) {
+      color: palette.themed("bg-warning");
+    }
+  }
+}

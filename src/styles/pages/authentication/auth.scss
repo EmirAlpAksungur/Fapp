@@ -1,0 +1,105 @@
+@use "../../components/palette";
+@use "../../components/button/btn";
+.authentication-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px - 40px);
+  @include palette.themify(palette.$themes) {
+    background-color: palette.themed("bg");
+  }
+  &__logo {
+    transform: inherit;
+    position: absolute;
+    bottom: 0;
+    filter: blur(18px);
+    height: calc(100% - 80px);
+    padding-block: 120px;
+    left: -22rem;
+    img {
+      height: 100%;
+    }
+  }
+  &__body {
+    z-index: 1;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15%;
+    flex-direction: row-reverse;
+  }
+}
+
+.auth-box {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 450px;
+  &__header {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    @include palette.themify(palette.$themes) {
+      color: palette.themed("text");
+    }
+  }
+  &__body {
+    padding-top: 24px;
+    &__label {
+      margin-bottom: 8px;
+      font-size: 1.4rem !important;
+      font-weight: 400;
+      @include palette.themify(palette.$themes) {
+        color: palette.themed("text-secondary");
+      }
+    }
+    &__text-field {
+      width: 100%;
+      .MuiInputBase-root {
+        padding-right: 0px;
+      }
+      .Mui-focused {
+        & fieldset {
+          @include palette.themify(palette.$themes) {
+            box-shadow: 0px 0px 0px 2px
+              rgba($color: palette.themed("border-warning"), $alpha: 0.2);
+            border: 1px solid palette.themed("border-warning") !important;
+          }
+        }
+      }
+      & fieldset {
+        @include palette.themify(palette.$themes) {
+          border-color: palette.themed("border-secondary");
+        }
+      }
+      &:hover {
+        & fieldset {
+          @include palette.themify(palette.$themes) {
+            border-color: palette.themed("border-warning");
+          }
+        }
+      }
+      input {
+        @include palette.themify(palette.$themes) {
+          color: palette.themed("text-secondary");
+          font-size: 1.2rem;
+        }
+      }
+      .end-adorment {
+        @include palette.themify(palette.$themes) {
+          color: palette.themed("text-secondary");
+        }
+      }
+    }
+    &__btn {
+      font-size: 1.6rem !important;
+      width: 100%;
+      margin-top: 6px;
+      @include btn.btnContained();
+    }
+  }
+}
